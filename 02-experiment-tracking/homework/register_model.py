@@ -74,11 +74,12 @@ def run_register_model(data_path: str, top_n: int):
         experiment_ids=experiment.experiment_id,
         run_view_type=ViewType.ACTIVE_ONLY,
         max_results=top_n,
-        order_by=["metrics.rmse ASC"])[0]
+        order_by=["metrics.test_rmse ASC"])[0]
 
     # Register the best model
+    print(best_run)
     model_uri = f"runs:/{best_run.info.run_id}/models"
-    mlflow.register_model(model_uri=model_uri, name='best_rf_2')
+    mlflow.register_model(model_uri=model_uri, name='best_rf_3')
 
 
 if __name__ == '__main__':
