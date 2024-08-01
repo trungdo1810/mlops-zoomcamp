@@ -1,6 +1,6 @@
-mlflow
+mlflow==2.13.0
 jupyter
-scikit-learn
+scikit-learn==1.4.0
 pandas
 seaborn
 hyperopt
